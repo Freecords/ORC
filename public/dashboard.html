@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Open Recording Code</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">Open Recording Code (ORC)</a></h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="#" onclick="logout()">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard-section">
+            <div class="container">
+                <h2>Your ORC Issuer Dashboard</h2>
+                
+                <div id="userInfo" class="user-info">
+                    <p>Loading...</p>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3>Your ORC Issuer Code</h3>
+                        <div id="orcCode" class="orc-display">Loading...</div>
+                        <p>Use this code to generate unique ORC identifiers for your recordings.</p>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h3>ORC Format</h3>
+                        <div class="format-display">
+                            <span id="userOrcFormat">Loading...</span>
+                        </div>
+                        <p>Your ORC codes will follow this format.</p>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h3>Generate ORC</h3>
+                        <div class="orc-generator">
+                            <button onclick="generateSampleORC()" class="btn-secondary">Generate Sample ORC</button>
+                            <div id="sampleORC" class="sample-orc"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h3>API Access</h3>
+                        <p>Use these endpoints to integrate ORC into your systems:</p>
+                        <ul>
+                            <li><code>GET /api/lookup/:orc</code></li>
+                            <li><code>GET /api/validate/:orc</code></li>
+                            <li><code>GET /api/registry</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Open Recording Code. Designed and maintained by Freecords B.V.</p>
+        </div>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
