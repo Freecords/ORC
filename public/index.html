@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Recording Code (ORC)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Open Recording Code (ORC)</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/register">Get Your Code</a>
+                <a href="/login">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>The Future-Proof Backbone for Music Metadata</h2>
+                <p>A globally unique identifier for music recordings, designed to be an open, decentralized, and scalable alternative to ISRC.</p>
+                <div class="cta-buttons">
+                    <a href="/register" class="btn-primary">Get Your ORC Code</a>
+                    <a href="#validator" class="btn-secondary">Validate ORC</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="format-section">
+            <div class="container">
+                <h3>ORC Format</h3>
+                <div class="format-display">
+                    <code>&lt;ISSUER&gt;-&lt;YYYY&gt;-&lt;NNNNNN&gt;-&lt;SUFFIX&gt;</code>
+                </div>
+                <div class="format-example">
+                    <strong>Example:</strong> FRC-2025-004129-K7V
+                </div>
+            </div>
+        </section>
+
+        <section id="validator" class="validator-section">
+            <div class="container">
+                <h3>ORC Validator & Lookup</h3>
+                <div class="validator-tool">
+                    <input type="text" id="orcInput" placeholder="Enter ORC code (e.g., FRC-2025-004129-K7V)" maxlength="20">
+                    <button onclick="validateORC()">Validate & Lookup</button>
+                </div>
+                <div id="validationResult" class="result-display"></div>
+            </div>
+        </section>
+
+        <section class="registry-section">
+            <div class="container">
+                <h3>ORC Issuer Registry</h3>
+                <div id="registryList" class="registry-list">
+                    <p>Loading registry...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h3>Key Features</h3>
+                <div class="features-grid">
+                    <div class="feature">
+                        <h4>Immutable</h4>
+                        <p>Once issued, the ORC cannot change</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Globally Unique</h4>
+                        <p>Combines issuer, time, and randomness</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Decentralized</h4>
+                        <p>Any approved issuer can generate ORCs</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Compact</h4>
+                        <p>Short enough for APIs, URLs, and metadata</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Traceable</h4>
+                        <p>Can identify platform, year, and source</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Open Standard</h4>
+                        <p>Free to use and implement</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="foundation-section">
+            <div class="container">
+                <h3>Building the Future Together</h3>
+                <p>The ORC standard was designed and is currently maintained by <strong>Freecords</strong>. We are actively seeking industry partners to help establish an independent foundation to govern this open standard.</p>
+                <p>Join us in creating a truly open and decentralized system for music metadata identification.</p>
+                <a href="mailto:info@freecords.com" class="btn-primary">Partner With Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Open Recording Code. Designed and maintained by Freecords B.V.</p>
+            <p>
+                <a href="https://github.com/openrecordingcode/spec">GitHub</a> |
+                <a href="/api/registry">Registry API</a> |
+                <a href="mailto:info@freecords.com">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
