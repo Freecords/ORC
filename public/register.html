@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for ORC - Open Recording Code</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">Open Recording Code (ORC)</a></h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/login">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-form">
+                    <h2>Get Your ORC Issuer Code</h2>
+                    <p>Register to receive your unique 3-letter ORC issuer code automatically.</p>
+                    
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password *</label>
+                            <input type="password" id="password" name="password" required minlength="6">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="companyName">Legal Company Name *</label>
+                            <input type="text" id="companyName" name="companyName" required placeholder="e.g., Freecords B.V. or John Doe">
+                            <small>Enter your legal company name or legal name if no company</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="website">Website</label>
+                            <input type="url" id="website" name="website" placeholder="https://example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Company Address</label>
+                            <textarea id="address" name="address" rows="3" placeholder="Full business address"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary" id="submitBtn">Create Account & Get ORC Code</button>
+                    </form>
+                    
+                    <div id="result" class="result-display"></div>
+                    
+                    <p class="auth-link">
+                        Already have an account? <a href="/login">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Open Recording Code. Designed and maintained by Freecords B.V.</p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+</body>
+</html>
