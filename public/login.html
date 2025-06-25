@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Open Recording Code</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">Open Recording Code (ORC)</a></h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/register">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-form">
+                    <h2>Login to Your Account</h2>
+                    
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary" id="submitBtn">Login</button>
+                    </form>
+                    
+                    <div id="result" class="result-display"></div>
+                    
+                    <p class="auth-link">
+                        Don't have an account? <a href="/register">Register here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Open Recording Code. Designed and maintained by Freecords B.V.</p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+</body>
+</html>
